@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, AppBar, Toolbar, Typography, Card, CardContent, Button, Grid, IconButton, Box, Avatar } from "@mui/material";
-import { GitHub, LinkedIn, Email, Work, School, Home as HomeIcon, Code, Business, Phone } from "@mui/icons-material";
+import { AppBar, Toolbar, Typography, Card, CardContent, Button, Grid, IconButton, Box, Avatar } from "@mui/material";
+import { GitHub, LinkedIn, Email, Work, School, Home as HomeIcon, Code, Phone } from "@mui/icons-material"; // Removed unused imports
 import { styled } from "@mui/material/styles";
 
 const PageContainer = styled("div")({
@@ -41,7 +41,7 @@ const Home = () => (
 
 const About = () => (
   <Section id="about" sx={{ backgroundColor: "#1e1e1e" }}>
-    <Typography variant="h4"><School /> About Me</Typography><br/>
+    <Typography variant="h4"><School /> About Me</Typography><br />
     <Typography>
       An inquisitive and disciplined individual with strong learning capabilities, known for reliability and
       thriving under pressure.
@@ -60,14 +60,14 @@ const Projects = () => {
 
   return (
     <Section id="projects">
-      <Typography variant="h4"><Code /> Projects</Typography><br/>
+      <Typography variant="h4"><Code /> Projects</Typography><br />
       <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ backgroundColor: "#1e1e1e", color: "#fff", padding: "1rem" }}>
               <CardContent>
                 <Typography variant="h6">{project.title}</Typography>
-                <Typography sx={{marginBottom:"20px"}}>{project.desc}</Typography>
+                <Typography sx={{ marginBottom: "20px" }}>{project.desc}</Typography>
                 <Button href={project.link} target="_blank" color="primary" variant="contained">View on GitHub</Button>
               </CardContent>
             </Card>
@@ -80,7 +80,7 @@ const Projects = () => {
 
 const Experience = () => (
   <Section id="experience">
-    <Typography variant="h4" sx={{marginBottom:"20px"}}><Work /> Experience</Typography>
+    <Typography variant="h4" sx={{ marginBottom: "20px" }}><Work /> Experience</Typography>
     <Box sx={{ backgroundColor: "#FFD700", color: "#000", padding: "2rem", marginBottom: "2rem", borderRadius: "10px" }}>
       <Typography variant="h6">EY - Data Analyst Intern</Typography>
       <Typography>Analyzing financial data using Alteryx and Excel.</Typography>
